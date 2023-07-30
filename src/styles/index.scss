@@ -1,0 +1,54 @@
+@import "base/variables";
+@import "base/reset";
+@import "mixins/mixins";
+
+[class*="__container"] {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 1001px) {
+    [class*="__container"] {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 803px) {
+    [class*="__container"] {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    [class*="__container"] {
+        padding: 0 10px;
+    }
+}
+
+#app {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.title {
+    @include title
+}
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/welcome";
+@import "blocks/about";
+@import "blocks/favorites";
+@import "blocks/shop";
+@import "blocks/contacts";
+@import "blocks/library-card";
+@import "blocks/footer";
+

@@ -1,0 +1,83 @@
+.shop {
+    padding-bottom: 60px;
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__subtitle {
+        padding: 0 16px;
+        font-size: var(--size-text-l);
+        font-weight: 400;
+        line-height: 200%;
+        letter-spacing: 1.5px;
+        text-transform: capitalize;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__span {
+        letter-spacing: 1.6px;
+        text-align: left;
+    }
+
+    &__prices {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.price {
+    flex: 0 1 438px;
+
+    &_right {
+        text-align: right;
+    }
+
+    &__title {
+        font-family: var(--font-forum);
+        color: var(--color-typo-gold);
+        font-size: var(--size-text-2xl);
+        line-height: 100%;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__product {
+        flex: 1 1 197px;
+        font-size: var(--size-text-l);
+        line-height: 200%;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        white-space: nowrap;
+    }
+
+    &__line {
+        min-width: 100px;
+        height: 1px;
+        background-color: var(--color-bg-gold);
+    }
+
+    &__dollars {
+        font-family: var(--font-forum);
+    }
+}

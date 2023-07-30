@@ -1,0 +1,58 @@
+@mixin title($color: var(--color-typo-main), $lh: var(--letter-spacing-l)) {
+    position: relative;
+    color: $color;
+    font-family: var(--font-forum);
+    font-size: var(--size-text-2xl);
+    font-weight: var(--font-weight-text-regular);
+    letter-spacing: var(--letter-spacing-l);
+    text-transform: capitalize;
+    text-align: center;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 50px;
+        height: 1px;
+        background-color: var(--color-bg-secondary);
+        transform: translate(-50%, 0%);
+    }
+}
+
+@mixin button($fz) {
+    border-radius: 2px;
+    font-size: $fz;
+    outline: 1px solid #0C0C0E;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    background-color: transparent;
+    font-weight: var(--font-weight-text-bold);
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-shrink: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 8px;
+    position: relative;
+    transition: all .2s ease;
+    &.active {
+        outline: 1px solid var(--color-typo-gold);
+        background-color: transparent;
+        color: var(--color-typo-gold);
+
+        &:hover {
+            user-select: none;
+            background-color: transparent;
+            cursor: inherit;
+        }
+    }
+
+    &:hover {
+        outline: 1px solid var(--color-typo-gold);
+        background-color: var(--color-typo-gold);
+    }
+}

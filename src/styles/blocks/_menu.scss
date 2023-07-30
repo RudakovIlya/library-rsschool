@@ -1,0 +1,189 @@
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__body {
+        display: flex;
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        @media (max-width: 767.98px) {
+            position: fixed;
+            justify-content: center;
+            top: 0;
+            right: -100%;
+            z-index: 22;
+            width: 100%;
+            min-height: 329px;
+            overflow: auto;
+            background-color: var(--color-bg-main);
+            padding: 81px 15px 30px 10px;
+            transition: right var(--burger-animation-time) ease;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            .open & {
+                right: 0;
+            }
+
+            &::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 80px;
+                width: 100%;
+                z-index: 22;
+                background-color: var(--color-bg-main);
+                transition: right var(--burger-animation-time) ease 0s;
+            }
+            .open &::before {
+                right: 0;
+            }
+        }
+
+    }
+
+
+    &__items-wrapper {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        column-gap: 40px;
+        position: relative;
+        z-index: 22;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        row-gap: 15px;
+        flex: 1 1 auto;
+        @media (max-width: 1001px) {
+            column-gap: 48px;
+        }
+
+        @media (max-width: 803px) {
+            column-gap: 38px;
+        }
+
+        @media (max-width: 767.98px) {
+            align-items: center;
+            flex-direction: column;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__item {
+        line-height: 140%;
+
+        .open & {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: var(--color-typo-white);
+        font-size: 20px;
+        line-height: var(--line-height-text-l);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            border-right: 5px;
+            background-color: var(--color-typo-white);
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.icon-menu {
+    display: none;
+    @media (max-width: 767.98px) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: transparent;
+        width: 45px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 22;
+        span,
+        &::before,
+        &::after {
+            content: '';
+            transition: all var(--burger-animation-time) ease;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: var(--color-bg-white);
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - 1px);
+        }
+        .open & {
+            span {
+                width: 0;
+            }
+
+            &::before,
+            &::after {
+                background-color: var(--color-bg-white);
+            }
+
+            &::before {
+                top: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                bottom: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.icon-profile {
+    height: 28px;
+    width: 28px;
+    background-color: transparent;
+}
+
+.background {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-overlay);
+    opacity: 0;
+    transition: all var(--burger-animation-time) ease;
+
+    &.open {
+        bottom: 0;
+        opacity: 1;
+    }
+}

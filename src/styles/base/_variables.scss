@@ -1,0 +1,51 @@
+:root {
+    // fonts
+    --font-inter: 'Inter', sans-serif;
+    --font-forum: 'Forum', cursive;
+
+    // background
+
+    --color-bg-default: red;
+    --header-height: 90px;
+    // colors
+
+    --color-typo-main: #000000;
+    --color-typo-secondary: #0C0C0E;
+    --color-typo-gold: #BB945F;
+    --color-typo-grey: #8E8E8E;
+    --color-typo-white: #FFFFFF;
+
+    --color-bg-main: #000000;
+    --color-bg-secondary: #0C0C0E;
+    --color-bg-gold: #BB945F;
+    --color-bg-grey: #8E8E8E;
+    --color-bg-white: #FFFFFF;
+    --color-bg-overlay: rgba(0, 0, 0, 0.3);
+
+    --font-weight-text-regular: 400;
+    --font-weight-text-medium: 500;
+    --font-weight-text-bold: 700;
+
+    // font-size
+    --size-text-s: 10px;
+    --size-text-m: 15px;
+    --size-text-l: 20px;
+    --size-text-xl: 30px;
+    --size-text-2xl: 40px;
+
+    // line-height
+    --line-height-text-xs1: 1em;
+    --line-height-text-2xs: 1.1em;
+    --line-height-text-xs: 1.2em;
+    --line-height-text-s: 1.4em;
+    --line-height-text-m: 1.5em;
+    --line-height-text-l: 1.6em;
+
+    // spacing
+
+    --letter-spacing-s: 0.6px;
+    --letter-spacing-l: 2px;
+    --letter-spacing-xl: 3px;
+
+    --burger-animation-time: 0.3s;
+}

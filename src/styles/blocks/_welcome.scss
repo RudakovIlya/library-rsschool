@@ -1,0 +1,37 @@
+@import '../mixins/mixins';
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(600px + var(--header-height));
+    background-image: url("../assets/images/welcome.jpg"), linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(18, 18, 21, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-bg-main);
+        min-width: 600px;
+        padding: 35px 40px;
+        transform: translate(0px, 75px);
+    }
+
+    &__span {
+        color: var(--color-typo-white);
+        font-family: var(--font-forum);
+        font-size: var(--size-text-2xl);
+        font-weight: var(--font-weight-text-regular);
+        line-height: 1.25;
+        letter-spacing: var(--letter-spacing-xl);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__container {
+        margin: 0;
+    }
+}

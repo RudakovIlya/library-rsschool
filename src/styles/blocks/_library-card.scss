@@ -1,0 +1,124 @@
+@import '../mixins/mixins';
+
+.library-card {
+    padding-bottom: 40px;
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.form {
+    flex: 0 1 600px;
+    text-align: center;
+
+    &__title {
+        font-size: var(--size-text-xl);
+        letter-spacing: 0.6px;
+        line-height: 1.3;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrapper {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 20px 20px 30px 20px;
+        outline: 3px solid var(--color-bg-gold);
+    }
+
+    &__fields {
+        text-align: left;
+        padding: 20px 20px 25px 20px;
+        background-color: var(--color-bg-gold);
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-forum);
+        font-size: var(--size-text-xl);
+        line-height: 166.667%;
+        letter-spacing: 0.6px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__field {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 8px 20px;
+        min-height: 66px;
+        color: var(--color-typo-gold);
+        font-family: var(--font-forum);
+        font-size: var(--size-text-xl);
+        line-height: 166.667%;
+        letter-spacing: 0.6px;
+
+        &::placeholder {
+            color: var(--color-typo-grey);
+            font-family: var(--font-forum);
+            font-size: var(--size-text-xl);
+            line-height: 166.667%;
+            letter-spacing: 0.6px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__button {
+        @include button(var(--size-text-l));
+        min-height: 44px;
+        min-width: 242px;
+    }
+}
+
+.column {
+    flex: 0 1 456px;
+    text-align: right;
+
+    &__title {
+        font-family: var(--font-forum);
+        font-size: var(--size-text-xl);
+        letter-spacing: 0.6px;
+        line-height: 1.3;
+    }
+
+    &__description {
+        font-size: var(--size-text-l);
+        line-height: 200%;
+        letter-spacing: 0.4px;
+    }
+
+    &__title, &__description {
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__button-wrapper {
+        display: inline-flex;
+        column-gap: 20px;
+    }
+
+    &__button {
+        @include button(var(--size-text-s));
+        min-width: 75px;
+    }
+}
+

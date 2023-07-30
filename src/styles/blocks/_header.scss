@@ -1,0 +1,25 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+
+    &__container {
+        min-height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        white-space: nowrap;
+        font-family: var(--font-forum);
+        font-size: var(--size-text-xl);
+        line-height: var(--line-height-text-l);
+        color: var(--color-typo-white);
+        letter-spacing: var(--letter-spacing-s);
+    }
+
+}
